@@ -8,7 +8,7 @@ namespace Domain.Enum
     {
         Open,
         Assigned,
-        Inprogress,
+        InProgress,
         Escalated,
         Resolved,
         Reopened
