@@ -1,17 +1,16 @@
-﻿using Domain.Enums;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using Domain.Enums;
 
-namespace Domain.Entities
+namespace Application.DTOs.Complaints
 {
-    public class Complaint : BaseEntity
+    public class ComplaintDto
     {
+        public Guid Id { get; set; }
         public Guid UnitId { get; set; }
         public Guid RaisedByUserId { get; set; }
         public Guid ComplaintCategoryId { get; set; }
-        public required string Description { get; set; }
-        public ComplaintStatus Status { get; set; } = ComplaintStatus.Open;
+        public string Description { get; set; } = string.Empty;
+        public ComplaintStatus Status { get; set; }
         public Guid? AssignedToUserId { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset SlaDeadline { get; set; }
